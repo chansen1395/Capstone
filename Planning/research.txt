@@ -1,0 +1,2 @@
+*** Basic Calendar implementation ***
+https://www.youtube.com/watch?v=wgqX295fGkY - npm install @syncfusion/ej2-react-calendars --save
