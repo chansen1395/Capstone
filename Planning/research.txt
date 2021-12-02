@@ -1,2 +1,7 @@
 *** Basic Calendar implementation ***
 https://www.youtube.com/watch?v=wgqX295fGkY - npm install @syncfusion/ej2-react-calendars --save
+
+
+*** Integrating React w/ Net as an api ***
+
+https://docs.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022
