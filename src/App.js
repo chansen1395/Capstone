@@ -1,5 +1,6 @@
 import React from 'react';
 import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<SignIn/>} />
+        <Route exact path="/sign-up" element={<SignUp/>} />
           {/* <SignIn/> */}
         {/* </Route> */}
         {/* <Route path="/sign-up">

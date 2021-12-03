@@ -1,0 +1,16 @@
+- Working React router
+- Working material-ui page/fixed imports
+- Fancy login page
+
+TO DO NEXT:
+  1. Get Local CRUD
+    - Organizer Name
+    - Group Name
+    - Date Requested
+    - Number of Attendees
+    - Length of stay
+    - Activities requested
+    - e-mail
+  2. Integrate Calendar UI somehow
+  3. Connect with Firebase
+  4. 
