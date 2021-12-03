@@ -2,7 +2,10 @@
 https://www.youtube.com/watch?v=wgqX295fGkY - npm install @syncfusion/ej2-react-calendars --save
 12/3 8:20 am: https://www.youtube.com/watch?v=iNkryf_TtZw
 12/3 9:30 am: actively reviewing docs for https://ej2.syncfusion.com/react/demos/?utm_source=npm&utm_campaign=calendar#/material/calendar/date-range
-12/3 12:30 am: reading through firebase lessons and docs
+12/3 12:30 pm: reading through firebase lessons and docs
+12/3 12:45 pm: material-ui interface? https://v4.mui.com/ $npm install @material-ui/core
+12/3 12:45 pm: material-ui interface? https://v4.mui.com/ $npm install @material-ui/core
+12/3 12:45 pm: npm install react-router-dom? https://v5.reactrouter.com/web/guides/quick-start
 
 *** Integrating React w/ Net as an api ***
 
