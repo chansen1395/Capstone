@@ -1,6 +1,7 @@
 *** Basic Calendar implementation ***
 https://www.youtube.com/watch?v=wgqX295fGkY - npm install @syncfusion/ej2-react-calendars --save
 12/3 8:20 am: https://www.youtube.com/watch?v=iNkryf_TtZw
+12/3 9:30 am: actively reviewing docs for https://ej2.syncfusion.com/react/demos/?utm_source=npm&utm_campaign=calendar#/material/calendar/date-range
 
 *** Integrating React w/ Net as an api ***
 
