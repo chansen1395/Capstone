@@ -11,9 +11,9 @@ function EditReservationForm (props) {
       organizer: event.target.organizer.value, 
       groupName: event.target.groupName.value, 
       visitDate: event.target.visitDate.value, 
-      groupSize: event.target.groupSize.value, 
       timeStart: event.target.timeStart.value, 
       timeEnd: event.target.timeEnd.value, 
+      groupSize: event.target.groupSize.value, 
       activities: event.target.activities.value, 
       notes: event.target.notes.value, 
       email: event.target.email.value, 
@@ -21,11 +21,55 @@ function EditReservationForm (props) {
     });
   }
 
+const info = props.onEditReservation.map(info => {
+  {info}
+})
+console.log(info);
   return (
     <React.Fragment>
-      <ReusableForm 
+        <form onSubmit={props.formSubmissionHandler}>
+        <input
+          type='text'
+          name='organizer'
+          value='Names'>
+        </input>
+        <input
+          type='text'
+          name='groupName'
+          value='Names'>
+        </input>
+        <input
+          type='text'
+          name='visitDate'
+          value='Names'>
+        </input>
+        <input
+          type='text'
+          name='timeStart'
+          value='Names'>
+        </input>
+        <input
+          type='text'
+          name='timeEnd'
+          value='Names'>
+        </input>
+        <input
+          type='text'
+          name='names'
+          value='Names'>
+        </input>
+        <input
+          type='text'
+          name='names'
+          value='Names'>
+        </input>
+        
+        
+        
+        
+        
+        </form>
         formSubmissionHandler={handleEditReservationFormSubmission}
-        buttonText="Update Reservation" />
     </React.Fragment>
   );
 }
