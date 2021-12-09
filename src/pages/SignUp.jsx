@@ -13,6 +13,10 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { ThemeProvider } from "@material-ui/core/styles";
 import firebase from "firebase/compat/app";
+import 'firebase/compat/auth';
+import { useNavigate } from "react-router-dom";
+
+
 
 // import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 
@@ -37,6 +41,9 @@ function Copyright(props) {
 // const theme = createTheme();
 
 export default function SignUp() {
+  
+  const navigate = useNavigate();
+  
   const signUpSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -49,10 +56,12 @@ export default function SignUp() {
       .createUserWithEmailAndPassword(data.get("email"), data.get("password"))
       .then(function () {
         console.log("successfully signed up!");
+        
       })
       .catch(function (error) {
         console.log(error.message);
       });
+      navigate("/sign-in");
   };
 
   return (

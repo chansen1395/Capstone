@@ -13,7 +13,10 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 // import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { ThemeProvider } from "@material-ui/core/styles";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import firebase from 'firebase/compat/app';
+import { isLoaded } from 'react-redux-firebase';
+import 'firebase/compat/auth';
 
 
 function Copyright(props) {
@@ -37,22 +40,33 @@ function Copyright(props) {
 
 export default function SignIn() {
   
-  const history = useHistory();
-
+  const navigate = useNavigate();
+  
   const signInSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(data.get('email'), data.get('password'))
-      .then(function () {
+    
+    //     console.log("Successfully signed in!");
+    //     navigate.push("/");
+    
+    //   })
+    //   .catch(function (error) {
+      //     alert(error.message);
+      //   });
+      
+      // const email = event.target.signinEmail.value;
+      // const password = event.target.signinPassword.value;
+      // console.log('email');
+      // console.log('password');
+      // firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
+        firebase.auth().signInWithEmailAndPassword(data.get("email"), data.get("password")).then(function () {
         console.log("Successfully signed in!");
-        history.push("/");
-      })
-      .catch(function (error) {
+        navigate("/");
+      }).catch(function (error) {
         console.log(error.message);
-      });
+    });
+
   };
 
   return (
