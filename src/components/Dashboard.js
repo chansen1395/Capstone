@@ -144,9 +144,9 @@ function DashboardContent() {
           </Toolbar>
           <Divider />
           {/* <List>{mainListItems}</List> */}
-          <h3>hi</h3>
+          <h3>Links Go Here</h3>
           <Divider />
-          <h3>there</h3>
+          <h3>More Links Go Here</h3>
           {/* <List>{secondaryListItems}</List> */}
         </Drawer>
         <Box
@@ -165,38 +165,38 @@ function DashboardContent() {
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
               {/* Chart */}
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={12} md={8} lg={8}>
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 360,
                   }}
                 >
                   {/* <Chart /> */}
-                  <h4>Another one</h4>
+                  <h4>Calendar</h4>
                 </Paper>
               </Grid>
               {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
+              <Grid item xs={12} md={4} lg={4}>
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 360,
                   }}
                   >
                   {/* <Deposits /> */}
-                  <h4>...Another one</h4>
+                  <h4>Add/Edit Form Goes Here</h4>
                 </Paper>
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   {/* <Orders /> */}
-                  <h4>......Another one</h4>
+                  <h4>Event List</h4>
                 </Paper>
               </Grid>
             </Grid>
