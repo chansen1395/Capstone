@@ -19,6 +19,26 @@ class ReservationControl extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.waitTimeUpdateTimer = setInterval(() =>
+      this.updateReservationElapsedWaitTime(),
+      60000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.waitTimeUpdateTimer);
+  }
+
+  updateReservationElapsedWaitTime = () => {
+    const { dispatch } = this.props;
+    Object.values(this.props.mainReservationList).forEach(reservation => {
+      const newFormattedWaitTime = reservation.timeOpen.fromNow(true);
+      const action = a.updateTime(reservation.id, newFormattedWaitTime);
+      dispatch(action);
+    });
+  }
+
   handleClick = () => {
     if (this.state.selectedReservation != null) {
       this.setState({

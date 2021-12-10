@@ -20,6 +20,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import EditReservationForm from './EditReservationForm';
 import ReusableForm from './ReusableForm';
 import ReservationList from './ReservationList';
+import { AuthUserContext, withAuthentication } from '../components/Session';
 // import { mainListItems, secondaryListItems } from './listItems';
 
 
@@ -95,6 +96,7 @@ function DashboardContent() {
   };
 
   return (
+    
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
