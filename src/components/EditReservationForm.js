@@ -63,7 +63,15 @@ console.log(info);
           name='names'
           value='Names'>
         </input>
-        
+        {/* organizer: event.target.organizer.value, 
+      groupName: event.target.groupName.value, 
+      visitDate: event.target.visitDate.value, 
+      timeStart: event.target.timeStart.value, 
+      timeEnd: event.target.timeEnd.value, 
+      groupSize: event.target.groupSize.value, 
+      activities: event.target.activities.value, 
+      notes: event.target.notes.value, 
+      email: event.target.email.value,  */}
         
         
         
