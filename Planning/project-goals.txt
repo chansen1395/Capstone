@@ -12,12 +12,11 @@ Contact form to request a visit
 What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
 
 React Native/Reactjs front end
-likely C# backend - rethinking
-MySQL - maybe firebase
+Firebase back end
 If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
 
 Automatically update db after approving visit request from e-mail.
-Host on AWS
+Host on Firebase - COMPLETED
 Allow admin to manage projects on property with similar UI to reservations calendar
 Flashy "About" page for visitors to learn more about available activities etc.
 Password management

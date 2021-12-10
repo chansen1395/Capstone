@@ -2,7 +2,7 @@ import React from 'react';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import SignOut from '../pages/SignOut';
-import HomeControl from '../pages/HomeControl';
+import HomeControl from './HomeControlntrol';
 import '../App.css';
 import {
   BrowserRouter as Router,
