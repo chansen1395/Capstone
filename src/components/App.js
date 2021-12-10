@@ -2,7 +2,8 @@ import React from 'react';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import SignOut from '../pages/SignOut';
-import HomeControl from './HomeControlntrol';
+import Dashboard from './Dashboard';
+// import HomeControl from './HomeControlntrol';
 import '../App.css';
 import {
   BrowserRouter as Router,
@@ -18,10 +19,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<HomeControl/>} />
+        <Route exact path="/" element={<SignIn/>} />
         <Route exact path="/sign-in" element={<SignIn/>} />
         <Route exact path="/sign-up" element={<SignUp/>} />
         <Route exact path="/sign-out" element={<SignOut/>} />
+        <Route exact path="/dashboard" element={<Dashboard/>} />
           {/* <SignIn/> */}
         {/* </Route> */}
         {/* <Route path="/sign-up">

@@ -58,7 +58,7 @@ export default function SignIn() {
       .catch(function (error) {
         console.log(error.message);
       });
-    navigate("/index");
+    navigate("/dashboard");
   };
 
 
