@@ -17,6 +17,9 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import EditReservationForm from './EditReservationForm';
+import ReusableForm from './ReusableForm';
+import ReservationList from './ReservationList';
 // import { mainListItems, secondaryListItems } from './listItems';
 
 
@@ -190,6 +193,7 @@ function DashboardContent() {
                   >
                   {/* <Deposits /> */}
                   <h4>Add/Edit Form Goes Here</h4>
+                  <ReusableForm/>
                 </Paper>
               </Grid>
               {/* Recent Orders */}
@@ -197,6 +201,7 @@ function DashboardContent() {
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   {/* <Orders /> */}
                   <h4>Event List</h4>
+                  <ReservationList/>
                 </Paper>
               </Grid>
             </Grid>

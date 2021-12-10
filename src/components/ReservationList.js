@@ -1,42 +1,42 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Ticket from "./Ticket";
+import Reservation from "./Reservation";
 // We need to import hooks functionality from both react-redux and react-redux-firebase.
 import { useSelector } from 'react-redux'
 import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase'
 
 
-function TicketList(props){
+function ReservationList(props){
   // The useFirestoreConnect() hook comes from react-redux-firebase.
   // useFirestoreConnect([
-  //   { collection: 'tickets',
-  //     doc: ticketId }
+  //   { collection: 'reservations',
+  //     doc: reservationId }
   // ]);
   useFirestoreConnect([
-    { collection: 'tickets'}
+    { collection: 'reservations'}
   ]);
 
   // The useSelector() hook comes from react-redux.
-  const tickets = useSelector(state => state.firestore.ordered.tickets);
+  const reservations = useSelector(state => state.firestore.ordered.reservations);
 
   // react-redux-firebase also offers a useful isLoaded() function.
-  if (isLoaded(tickets)) {
+  if (isLoaded(reservations)) {
     return (
       <React.Fragment>
         <hr/>
-        {tickets.map((ticket) => {
-          return <Ticket
-            whenTicketClicked = { props.onTicketSelection }
-            names={ticket.names}
-            location={ticket.location}
-            issue={ticket.issue}
-            formattedWaitTime={ticket.formattedWaitTime}
-            id={ticket.id}
-            key={ticket.id}/>
+        {reservations.map((reservation) => {
+          return <Reservation
+            whenReservationClicked = { props.onReservationSelection }
+            names={reservation.names}
+            location={reservation.location}
+            issue={reservation.issue}
+            formattedWaitTime={reservation.formattedWaitTime}
+            id={reservation.id}
+            key={reservation.id}/>
         })}
       </React.Fragment>
     );
-  // If the tickets aren't loaded yet, our fragment will return a "Loading..." message.
+  // If the reservations aren't loaded yet, our fragment will return a "Loading..." message.
   } else {
     return (
       <React.Fragment>
@@ -46,10 +46,10 @@ function TicketList(props){
   }
 }
 
-TicketList.propTypes = {
-  // We no longer need ticketList props.
-  // ticketList: PropTypes.object,
-  onTicketSelection: PropTypes.func
+ReservationList.propTypes = {
+  // We no longer need reservationList props.
+  // reservationList: PropTypes.object,
+  onReservationSelection: PropTypes.func
 };
 
-export default TicketList;
+export default ReservationList;
