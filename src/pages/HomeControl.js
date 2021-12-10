@@ -1,6 +1,7 @@
 import React from 'react'
 import { withFirestore, isLoaded } from 'react-redux-firebase';
 import 'firebase/compat/auth';
+import { Link } from 'react-router-dom';
 
 
 class HomeControl extends React.Component {
@@ -18,6 +19,11 @@ class HomeControl extends React.Component {
       return (
         <div>
           <p>Signed in</p>
+          <button>
+            <Link href="sign-out" variant="body2">
+                {"Log Out Page"}
+            </Link>
+          </button>
         </div>)
     }
   }

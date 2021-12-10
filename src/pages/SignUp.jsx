@@ -47,16 +47,12 @@ export default function SignUp() {
   const signUpSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    // console.log({
-    //   email: data.get('email'),
-    //   password: data.get('password'),
+
     firebase
       .auth()
       .createUserWithEmailAndPassword(data.get("email"), data.get("password"))
       .then(function () {
         console.log("successfully signed up!");
-        
       })
       .catch(function (error) {
         console.log(error.message);
